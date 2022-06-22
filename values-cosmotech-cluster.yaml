@@ -1,6 +1,6 @@
 image:
-  registry: ghcr.io/cosmo-tech
-  repository: cosmotech-redis
+  registry: ghcr.io
+  repository: cosmo-tech/cosmotech-redis
   tag: latest
 commonConfiguration: |-
   loadmodule /opt/bitnami/redis/modules/redisgraph.so
