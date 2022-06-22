@@ -1,5 +1,6 @@
 image:
-  repository: cosmotech/redis
+  imageRegistry: ghcr/cosmo-tech
+  repository: cosmotech-redis
   tag: latest
 commonConfiguration: |-
   loadmodule /opt/bitnami/redis/modules/redisgraph.so
