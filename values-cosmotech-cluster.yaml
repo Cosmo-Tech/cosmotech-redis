@@ -1,5 +1,5 @@
+imageRegistry: ghcr.io/cosmo-tech
 image:
-  imageRegistry: ghcr/cosmo-tech
   repository: cosmotech-redis
   tag: latest
 commonConfiguration: |-
