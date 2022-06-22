@@ -1,4 +1,5 @@
-imageRegistry: ghcr.io/cosmo-tech
+global:
+  imageRegistry: ghcr.io/cosmo-tech
 image:
   repository: cosmotech-redis
   tag: latest
