@@ -6,6 +6,5 @@ commonConfiguration: |-
   loadmodule /opt/bitnami/redis/modules/redisgraph.so
   loadmodule /opt/bitnami/redis/modules/redistimeseries.so
   loadmodule /opt/bitnami/redis/modules/rejson.so
-commonAnnotations: |-
-  labels:
-    networking/traffic-allowed: "yes"
+commonLabels:
+  networking/traffic-allowed: "yes"
