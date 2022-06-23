@@ -2,13 +2,13 @@ image:
   registry: ghcr.io
   repository: cosmo-tech/cosmotech-redis
   tag: latest
-commonConfiguration: |-
-  loadmodule /opt/bitnami/redis/modules/redisgraph.so
-  loadmodule /opt/bitnami/redis/modules/redistimeseries.so
-  loadmodule /opt/bitnami/redis/modules/rejson.so
 master:
   podLabels:
     networking/traffic-allowed: "yes"
 replica:
   podLabels:
     networking/traffic-allowed: "yes"
+commonConfiguration: |-
+  loadmodule /opt/bitnami/redis/modules/redisgraph.so
+  loadmodule /opt/bitnami/redis/modules/redistimeseries.so
+  loadmodule /opt/bitnami/redis/modules/rejson.so
