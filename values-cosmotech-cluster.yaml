@@ -6,5 +6,9 @@ commonConfiguration: |-
   loadmodule /opt/bitnami/redis/modules/redisgraph.so
   loadmodule /opt/bitnami/redis/modules/redistimeseries.so
   loadmodule /opt/bitnami/redis/modules/rejson.so
-commonLabels:
-  networking/traffic-allowed: "yes"
+master:
+  podLabels:
+    networking/traffic-allowed: "yes"
+replica:
+  podLabels:
+    networking/traffic-allowed: "yes"
