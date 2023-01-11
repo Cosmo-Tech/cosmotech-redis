@@ -3,6 +3,7 @@ Installed modules:
 * redis graph
 * redis json
 * redis timeseries
+* redis search
 
 This image is used by Cosmo Tech with [Bitnami Redis Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/redis).
 Use the values-cosmotech-cluster.yaml file in order to load the modules:
