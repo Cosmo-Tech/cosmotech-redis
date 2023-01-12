@@ -12,3 +12,4 @@ commonConfiguration: |-
   loadmodule /opt/bitnami/redis/modules/redisgraph.so
   loadmodule /opt/bitnami/redis/modules/redistimeseries.so
   loadmodule /opt/bitnami/redis/modules/rejson.so
+  loadmodule /opt/bitnami/redis/modules/redisearch.so
