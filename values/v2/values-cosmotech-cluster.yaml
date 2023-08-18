@@ -9,6 +9,13 @@ replica:
   podLabels:
     networking/traffic-allowed: "yes"
 commonConfiguration: |-
+  appendonly yes
+  save ""
+  repl-diskless-sync no
+  stop-writes-on-bgsave-error no
+  client-output-buffer-limit normal 0 0 0
+  client-output-buffer-limit replica 512mb 512mb 60
+  client-output-buffer-limit pubsub 32mb 8mb 60
   loadmodule /opt/bitnami/redis/modules/redisgraph.so
   loadmodule /opt/bitnami/redis/modules/redistimeseries.so DUPLICATE_POLICY LAST
   loadmodule /opt/bitnami/redis/modules/rejson.so
