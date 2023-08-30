@@ -9,8 +9,6 @@ replica:
   podLabels:
     networking/traffic-allowed: "yes"
 commonConfiguration: |-
-  appendonly no
-  save ""
   repl-diskless-sync no
   stop-writes-on-bgsave-error no
   client-output-buffer-limit normal 0 0 0
