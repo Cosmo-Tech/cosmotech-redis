@@ -1,10 +1,16 @@
-FROM bitnami/redis:latest
+FROM bitnami/redis:7.0.15
 
 RUN mkdir /opt/bitnami/redis/modules
 COPY ./*.so* /opt/bitnami/redis/modules/
 
 USER root
-RUN apt-get update && apt-get install libgomp1
+
+RUN apt-get update
+RUN apt-get install -y wget
+
+RUN wget http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.1_1.1.1n-0+deb10u6_amd64.deb
+RUN dpkg -i libssl1.1_1.1.1n-0+deb10u6_amd64.deb
+
 COPY redis.conf /opt/bitnami/redis/etc
 RUN chmod g+rwX /opt/bitnami/redis/etc/redis.conf
 
