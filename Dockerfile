@@ -1,4 +1,4 @@
-FROM bitnami/redis:7.0.15
+FROM bitnami/redis:7.2.4
 
 RUN mkdir /opt/bitnami/redis/modules
 COPY ./*.so* /opt/bitnami/redis/modules/
