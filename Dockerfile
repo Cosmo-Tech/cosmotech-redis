@@ -8,8 +8,8 @@ USER root
 RUN apt-get update
 RUN apt-get install -y wget
 
-RUN wget http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.1_1.1.1n-0+deb10u6_amd64.deb
-RUN dpkg -i libssl1.1_1.1.1n-0+deb10u6_amd64.deb
+RUN wget https://ftp.debian.org/debian/pool/main/o/openssl/libssl1.1_1.1.1w-0+deb11u1_amd64.deb
+RUN dpkg -i libssl1.1_1.1.1w-0+deb11u1_amd64.deb
 
 COPY redis.conf /opt/bitnami/redis/etc
 RUN chmod g+rwX /opt/bitnami/redis/etc/redis.conf
