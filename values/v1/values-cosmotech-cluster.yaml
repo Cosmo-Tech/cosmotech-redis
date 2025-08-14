@@ -12,3 +12,17 @@ commonConfiguration: |-
   loadmodule /opt/bitnami/redis/modules/redisgraph.so
   loadmodule /opt/bitnami/redis/modules/redistimeseries.so
   loadmodule /opt/bitnami/redis/modules/rejson.so
+# Adding this part to override default values (even if volumePermissions and sysctl are disabled)
+# See https://github.com/bitnami/charts/issues/35164
+volumePermissions:
+  enabled: false
+  image:
+    registry: docker.io
+    repository: bitnamilegacy/os-shell
+    tag: 12-debian-12-r21
+sysctl:
+  enabled: false
+  image:
+    registry: docker.io
+    repository: bitnamilegacy/os-shell
+    tag: 12-debian-12-r21
